@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Battle Sanctuary (Prototype)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>AI Battle Sanctuary</h1>
+        <p class="subtitle">固定キャラクターで遊べるバトルシミュレーター（MVP）</p>
+      </header>
+
+      <section class="panel controls">
+        <div class="control-row">
+          <label for="arena">戦場</label>
+          <select id="arena">
+            <option value="ruins">古代遺跡（安定）</option>
+            <option value="volcano">火山地帯（火力強化）</option>
+            <option value="forest">深緑の聖域（回復強化）</option>
+          </select>
+        </div>
+        <div class="control-row">
+          <label for="roundLimit">最大ターン数</label>
+          <input id="roundLimit" type="number" min="5" max="40" value="20" />
+        </div>
+        <div class="button-row">
+          <button id="runBattleBtn">バトル開始</button>
+          <button id="resetBtn" class="secondary">リセット</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel status-card">
+          <h2>チームA</h2>
+          <ul id="teamAStatus" class="status-list"></ul>
+        </article>
+
+        <article class="panel status-card">
+          <h2>チームB</h2>
+          <ul id="teamBStatus" class="status-list"></ul>
+        </article>
+      </section>
+
+      <section class="panel result">
+        <h2>結果</h2>
+        <p id="winnerText">「バトル開始」を押してください。</p>
+      </section>
+
+      <section class="panel battle-log">
+        <h2>バトルログ</h2>
+        <ol id="battleLog"></ol>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
