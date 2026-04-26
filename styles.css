@@ -1,0 +1,145 @@
+:root {
+  color-scheme: dark;
+  --bg: #071223;
+  --panel: #0f1d33;
+  --panel-soft: #152746;
+  --text: #e9f2ff;
+  --sub: #b4c3db;
+  --accent: #65c8ff;
+  --danger: #ff6b8a;
+  --ok: #6dffbf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Hiragino Sans", "Meiryo", sans-serif;
+  background: radial-gradient(circle at top, #10315b 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+header {
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: var(--sub);
+}
+
+.panel {
+  background: linear-gradient(160deg, var(--panel) 0%, var(--panel-soft) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.controls {
+  display: grid;
+  gap: 10px;
+}
+
+.control-row {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  color: var(--sub);
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #0d1730;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(135deg, #1f6dcb, var(--accent));
+  color: #041224;
+  border: none;
+  font-weight: 700;
+}
+
+button.secondary {
+  background: #172847;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.status-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.status-list li {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  font-size: 0.92rem;
+}
+
+.hp {
+  color: var(--ok);
+  font-weight: 700;
+}
+
+.hp.zero {
+  color: var(--danger);
+}
+
+#winnerText {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.battle-log ol {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  max-height: 340px;
+  overflow: auto;
+}
+
+.battle-log li {
+  color: #dbe7fa;
+  line-height: 1.45;
+}
